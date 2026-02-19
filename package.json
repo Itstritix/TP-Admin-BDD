@@ -6,10 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@openfoodfacts/openfoodfacts-nodejs": "^2.0.0-alpha.19",
+    "@prisma/client": "^7.3.0",
+    "axios": "^1.13.4",
+    "better-sqlite3": "^12.6.2",
+    "crypto": "^1.0.1",
+    "lucide-react": "^0.574.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.5",
     "next": "16.1.6",
+    "prisma": "^7.3.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
@@ -18,9 +30,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "mongodb-memory-server": "^11.0.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.0.18"
   }
 }

@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* On définit des couleurs de base propres */
+  --background: #f8fafc; /* Un gris-bleu très léger (slate-50) */
+  --foreground: #0f172a; /* Un bleu-noir profond (slate-900) */
+}
+
+/* Optionnel : Mode sombre automatique si tu veux garder le support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617; /* Fond très sombre */
+    --foreground: #f8fafc; /* Texte clair */
+  }
 }
 
 @theme inline {
@@ -12,15 +21,18 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Nettoyage du body */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  min-h-screen: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Petit fix pour s'assurer que les liens ne sont pas invisibles */
+a {
+  color: inherit;
+  text-decoration: none;
 }

@@ -1,0 +1,65 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "__v",
+      "enriched_at",
+      "enriched_value",
+      "raw_product_id",
+      "status"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "__v": {
+        "bsonType": "int"
+      },
+      "enriched_at": {
+        "bsonType": "date"
+      },
+      "enriched_value": {
+        "bsonType": "object",
+        "properties": {
+          "categories": {
+            "bsonType": "string"
+          },
+          "code": {
+            "bsonType": "string"
+          },
+          "countries": {
+            "bsonType": "string"
+          },
+          "eco_score": {
+            "bsonType": "string"
+          },
+          "image_url": {
+            "bsonType": "string"
+          },
+          "nutriscore": {
+            "bsonType": "string"
+          },
+          "product_name": {
+            "bsonType": "string"
+          }
+        },
+        "required": [
+          "categories",
+          "code",
+          "countries",
+          "eco_score",
+          "image_url",
+          "nutriscore",
+          "product_name"
+        ]
+      },
+      "raw_product_id": {
+        "bsonType": "objectId"
+      },
+      "status": {
+        "bsonType": "bool"
+      }
+    }
+  }
+}
